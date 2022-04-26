@@ -54,6 +54,10 @@ const clickHandler = async () => {
     yDirection: "bot",
   };
 
+  glad.element.classList.add(
+    glad.xDirection === "left" ? "left-rotate" : "right-rotate"
+  );
+
   glad.element.style.height = headHeight + "px";
   glad.element.style.width = headWidth + "px";
   glad.element.style.left = glad.left + "px";
@@ -103,6 +107,8 @@ setInterval(() => {
         if (leftCord + sideSpeed > maxLeftValue) {
           glad.element.style.left = maxLeftValue + "px";
           glad.xDirection = "left";
+          glad.element.classList.remove("right-rotate");
+          glad.element.classList.add("left-rotate");
         } else {
           if (topCord < maxTopValue) {
             glad.element.style.left = leftCord + sideSpeed + "px";
@@ -116,6 +122,8 @@ setInterval(() => {
       if (leftCord - sideSpeed < 0) {
         glad.element.style.left = 0 + "px";
         glad.xDirection = "right";
+        glad.element.classList.remove("left-rotate");
+        glad.element.classList.add("right-rotate");
       } else {
         if (topCord < maxTopValue) {
           glad.element.style.left = leftCord - sideSpeed + "px";

@@ -26,10 +26,26 @@ body {
 .glad-head {
   cursor: pointer;
   position: absolute;
-  animation: glad 2s infinite linear;
 }
 
-@keyframes glad {
+.left-rotate {
+  animation: left 2s infinite linear;
+}
+
+.right-rotate {
+  animation: right 2s infinite linear;
+}
+
+@keyframes left {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes right {
   from {
     transform: rotate(0deg);
   }
@@ -37,6 +53,7 @@ body {
     transform: rotate(360deg);
   }
 }
+
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
