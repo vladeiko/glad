@@ -15,6 +15,7 @@ const init = async () => {
   if (!isPlaying) {
     const music = document.createElement("audio");
     music.src = song;
+    music.loop = true;
     music.autoplay = true;
 
     isPlaying = true;
