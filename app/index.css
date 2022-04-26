@@ -1,0 +1,9 @@
+body {
+  font-family: "Liberation Serif";
+  margin: 0;
+}
+
+.page-wrapper {
+  height: 100vh;
+  width: 100%;
+}
