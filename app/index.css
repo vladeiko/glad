@@ -6,9 +6,17 @@ body {
 .page-wrapper {
   height: 100vh;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+}
+
+.content-wrapper {
+  position: relative;
+  min-height: 600px;
+}
+
+.border {
+  height: 16px;
+  width: 100%;
+  background-color: black;
 }
 
 .instruction {
@@ -18,19 +26,23 @@ body {
 .glad-head {
   cursor: pointer;
   position: absolute;
-  width: 64px;
-  animation: glad 5s alternate-reverse infinite;
+  animation: glad 2s infinite linear;
 }
 
 @keyframes glad {
   from {
-    left: 16px;
-    top: 32px;
     transform: rotate(0deg);
   }
   to {
-    left: calc(100% - 64px);
-    top: calc(100% - 64px);
     transform: rotate(360deg);
   }
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
