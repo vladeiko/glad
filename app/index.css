@@ -11,8 +11,8 @@ body {
   justify-content: space-between;
 }
 
-.content-wrapper {
-  height: 100%;
+.instruction {
+  font-size: 22px;
 }
 
 .glad-head {
@@ -26,9 +26,11 @@ body {
   from {
     left: 16px;
     top: 32px;
+    transform: rotate(0deg);
   }
   to {
     left: calc(100% - 64px);
     top: calc(100% - 64px);
+    transform: rotate(360deg);
   }
 }
